@@ -29,10 +29,10 @@ GitHub → Jenkins (EC2) → Maven Build → Docker Host (EC2) → Docker Contai
 ### Step 1: Launch EC2 Instance
 - Instance type: t3.micro (free tier)
 - Security Group: allow port 22 (SSH) and 8080 (Jenkins)
-PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
+<img width="906" height="383" alt="jenkins servers creation" src="https://github.com/user-attachments/assets/e8b3210e-9772-43b3-8deb-c8b708385d14" />
 ---> **successfully connected** to my EC2 instance via SSH ✅ :
-  PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
-
+  <img width="535" height="194" alt="Pasted image 20260301043553" src="https://github.com/user-attachments/assets/67fad565-8c20-4565-b748-afea60ddbe30" />
+  
 ### Step 2: Install Java 17 & Jenkins
 ```bash
 sudo dnf install java-17-amazon-corretto-devel -y
