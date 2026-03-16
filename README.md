@@ -265,6 +265,7 @@ In short — it's the proof that the automatic trigger between GitHub and Jenkin
 git push → GitHub Webhook → Jenkins triggered →
 Maven builds WAR → SSH transfers to Docker Host →
 Docker builds image → Container launched → App live!
+```
 
 ## 👩‍💻 Author
 **Afaf Oubella**  
