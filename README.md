@@ -1,6 +1,6 @@
 # 🚀 Deploy Java Web App on Docker Container using Jenkins on AWS
 
-<img width="630" height="439" alt="image" src="https://github.com/user-attachments/assets/68244a1c-fff7-4e29-91b6-c8b0cd289928" />
+<img width="779" height="442" alt="image" src="https://github.com/user-attachments/assets/b41a9d28-6a6b-43ba-bd85-7ea3db18acce" />
 
 ## 📋 Project Overview
 This project demonstrates a complete CI/CD pipeline that automatically builds 
