@@ -214,7 +214,7 @@ Click **Save**.
 - ✅ **SSH: Transferred 1 file(s)** — WAR file copied to Docker host
 - ✅ Docker build and container launched
 
-PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
+<img width="941" height="440" alt="Pasted image 20260314053310" src="https://github.com/user-attachments/assets/eed2d6b8-9e94-4c2b-ab44-39c1534988e0" />
 
 ### Check WAR file is in the right place :
 
