@@ -257,7 +257,6 @@ The build triggered automatically :
 Once the build succeeds, the new Docker image and running container should appear as follows :
 
 <img width="886" height="122" alt="Pasted image 20260314072353" src="https://github.com/user-attachments/assets/20cd424e-c6ed-42c3-8fbc-173bf9a4ffeb" />
-<img width="886" height="122" alt="Pasted image 20260314072405" src="https://github.com/user-attachments/assets/db1e3b59-113f-487f-a47a-9f239b351824" />
 
 From the GitHub Hook Log we can see when and from which repository GitHub sent a notification to Jenkins, and whether Jenkins received it successfully or not.
 In short — it's the proof that the automatic trigger between GitHub and Jenkins is working. ✅
