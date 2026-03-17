@@ -178,11 +178,13 @@ COPY ./*.war /usr/local/tomcat/webapps
 
 ### Install "Publish Over SSH" Plugin
 In Jenkins → **Manage Jenkins → System → Publish Over SSH:**
-PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
+
+<img width="680" height="213" alt="Pasted image 20260311040813" src="https://github.com/user-attachments/assets/ee36d70a-b68e-4523-a374-e57352e22c91" />
 
 ### Configure Docker Host in Jenkins
 
-<img width="680" height="213" alt="Pasted image 20260311040813" src="https://github.com/user-attachments/assets/ee36d70a-b68e-4523-a374-e57352e22c91" />
+<img width="865" height="410" alt="Pasted image 20260311055352" src="https://github.com/user-attachments/assets/9276e867-2789-4993-8abc-dcdc3e05d225" />
+
 
 ✅ Test Configuration → **Success**
 
