@@ -1,5 +1,120 @@
 # 🚀 Deploy Java Web App on Docker Container using Jenkins on AWS
 
+<svg width="100%" viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="680" height="520" fill="#0d1117" rx="16"/>
+
+  <!-- Title -->
+  <text font-family="monospace" font-size="13" font-weight="600" fill="#58a6ff"
+        x="340" y="35" text-anchor="middle">
+    CI/CD Pipeline — Deploy Java App on Docker via Jenkins on AWS
+  </text>
+
+  <!-- ========== TOP FLOW ========== -->
+
+  <!-- 1. Developer -->
+  <rect x="20" y="60" width="100" height="60" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.2"/>
+  <text font-family="monospace" font-size="11" font-weight="700" fill="#c9d1d9" x="70" y="86" text-anchor="middle">Developer</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="70" y="102" text-anchor="middle">local machine</text>
+
+  <!-- Arrow 1 -->
+  <line x1="120" y1="90" x2="158" y2="90" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text font-family="monospace" font-size="9" fill="#58a6ff" x="139" y="83" text-anchor="middle">git push</text>
+
+  <!-- 2. GitHub -->
+  <rect x="158" y="60" width="100" height="60" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.2"/>
+  <text font-family="monospace" font-size="11" font-weight="700" fill="#c9d1d9" x="208" y="86" text-anchor="middle">GitHub</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="208" y="102" text-anchor="middle">source code</text>
+
+  <!-- Arrow 2 -->
+  <line x1="258" y1="90" x2="296" y2="90" stroke="#f78166" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <text font-family="monospace" font-size="9" fill="#f78166" x="277" y="83" text-anchor="middle">webhook</text>
+
+  <!-- 3. Jenkins EC2 -->
+  <rect x="296" y="48" width="155" height="84" rx="10" fill="#161b22" stroke="#388bfd" stroke-width="1.5"/>
+  <text font-family="monospace" font-size="11" font-weight="700" fill="#58a6ff" x="373" y="70" text-anchor="middle">Jenkins EC2</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="373" y="86" text-anchor="middle">Amazon Linux 2023</text>
+  <!-- Maven inner -->
+  <rect x="312" y="96" width="123" height="26" rx="6" fill="#1f3d2e" stroke="#3fb950" stroke-width="1"/>
+  <text font-family="monospace" font-size="9" font-weight="700" fill="#3fb950" x="373" y="113" text-anchor="middle">Maven build · Java 17</text>
+
+  <!-- Arrow 3 -->
+  <line x1="451" y1="90" x2="489" y2="90" stroke="#d2a8ff" stroke-width="1.5" marker-end="url(#arr3)"/>
+  <text font-family="monospace" font-size="9" fill="#d2a8ff" x="470" y="80" text-anchor="middle">SSH</text>
+  <text font-family="monospace" font-size="9" fill="#d2a8ff" x="470" y="102" text-anchor="middle">webapp.war</text>
+
+  <!-- 4. Docker Host EC2 -->
+  <rect x="489" y="48" width="160" height="84" rx="10" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+  <text font-family="monospace" font-size="11" font-weight="700" fill="#f0883e" x="569" y="70" text-anchor="middle">Docker Host EC2</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="569" y="86" text-anchor="middle">Amazon Linux 2023</text>
+  <!-- Docker inner -->
+  <rect x="505" y="96" width="128" height="26" rx="6" fill="#3d2400" stroke="#f0883e" stroke-width="1"/>
+  <text font-family="monospace" font-size="9" font-weight="700" fill="#f0883e" x="569" y="113" text-anchor="middle">Docker + Tomcat · :8087</text>
+
+  <!-- Arrow 4 (down to browser) -->
+  <line x1="569" y1="133" x2="569" y2="175" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <text font-family="monospace" font-size="9" fill="#3fb950" x="600" y="158" text-anchor="start">:8087</text>
+
+  <!-- 5. Browser -->
+  <rect x="504" y="175" width="130" height="50" rx="10" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text font-family="monospace" font-size="11" font-weight="700" fill="#3fb950" x="569" y="197" text-anchor="middle">Browser</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="569" y="213" text-anchor="middle">Java web app live ✓</text>
+
+  <!-- ========== DIVIDER ========== -->
+  <line x1="30" y1="255" x2="650" y2="255" stroke="#30363d" stroke-width="0.8" stroke-dasharray="5 4"/>
+  <text font-family="monospace" font-size="10" fill="#8b949e" x="340" y="272" text-anchor="middle">AWS Infrastructure</text>
+
+  <!-- ========== AWS CLOUD BOX ========== -->
+  <rect x="20" y="282" width="640" height="210" rx="14" fill="none" stroke="#388bfd" stroke-width="1" stroke-dasharray="6 4"/>
+  <text font-family="monospace" font-size="10" fill="#388bfd" x="40" y="300">☁  AWS Cloud — us-east-1</text>
+
+  <!-- Jenkins EC2 detail box -->
+  <rect x="40" y="308" width="270" height="160" rx="10" fill="#161b22" stroke="#388bfd" stroke-width="1.2"/>
+  <rect x="40" y="308" width="270" height="28" rx="10" fill="#1c2d3f"/>
+  <rect x="40" y="322" width="270" height="14" fill="#1c2d3f"/>
+  <text font-family="monospace" font-size="11" font-weight="700" fill="#58a6ff" x="175" y="327" text-anchor="middle">EC2 — Jenkins Server</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="60" y="355">  OS        Amazon Linux 2023</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="60" y="373">  Type      t2.micro (free tier)</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="60" y="391">  Java      Corretto 17</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="60" y="409">  Jenkins   v2.541.2</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="60" y="427">  Maven     3.9.12</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="60" y="445">  Port      8080</text>
+
+  <!-- Docker EC2 detail box -->
+  <rect x="370" y="308" width="270" height="160" rx="10" fill="#161b22" stroke="#f0883e" stroke-width="1.2"/>
+  <rect x="370" y="308" width="270" height="28" rx="10" fill="#2d1f0e"/>
+  <rect x="370" y="322" width="270" height="14" fill="#2d1f0e"/>
+  <text font-family="monospace" font-size="11" font-weight="700" fill="#f0883e" x="505" y="327" text-anchor="middle">EC2 — Docker Host</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="390" y="355">  OS        Amazon Linux 2023</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="390" y="373">  Type      t2.micro (free tier)</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="390" y="391">  Docker    v25.0.14</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="390" y="409">  Image     tomcat:latest</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="390" y="427">  User      admin (docker group)</text>
+  <text font-family="monospace" font-size="9" fill="#8b949e" x="390" y="445">  Port      8087</text>
+
+  <!-- Arrow between EC2 boxes -->
+  <line x1="310" y1="388" x2="368" y2="388" stroke="#d2a8ff" stroke-width="1.5" marker-end="url(#arr3)"/>
+  <text font-family="monospace" font-size="9" fill="#d2a8ff" x="339" y="380" text-anchor="middle">SSH/SCP</text>
+
+  <!-- ========== MARKERS ========== -->
+  <defs>
+    <marker id="arr"  viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#f78166" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arr3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#d2a8ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arr4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#3fb950" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+</svg>
+
 ## 📋 Project Overview
 This project demonstrates a complete CI/CD pipeline that automatically builds 
 and deploys a Java Web Application on a Docker Container hosted on AWS EC2, 
@@ -266,7 +381,3 @@ git push → GitHub Webhook → Jenkins triggered →
 Maven builds WAR → SSH transfers to Docker Host →
 Docker builds image → Container launched → App live!
 ```
-
-## 👩‍💻 Author
-**Afaf Oubella**  
-DevOps Mini Project — March 2026
